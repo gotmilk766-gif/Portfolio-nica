@@ -164,6 +164,13 @@
     /* Benefits */
     .benefit-icon { font-size: 1.3rem; margin-bottom: 0.6rem; }
 
+    /* Traits */
+    .trait-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0.85rem; }
+    @media (max-width: 600px) { .trait-grid { grid-template-columns: 1fr; } }
+    .trait-item { display: flex; align-items: center; gap: 0.75rem; background: var(--card); border: 1px solid var(--border); border-radius: 999px; padding: 0.7rem 1.1rem; backdrop-filter: blur(10px); }
+    .trait-check { flex-shrink: 0; width: 22px; height: 22px; border-radius: 50%; background: var(--accent); color: #0a0a18; font-size: 0.75rem; font-weight: 700; display: flex; align-items: center; justify-content: center; }
+    .trait-item span { font-size: 0.92rem; font-weight: 500; color: var(--text); }
+
     /* Contact */
 
     .contact-wrap {
@@ -471,9 +478,9 @@
     <section id="services">
       <div class="container">
         <p class="section-label reveal">What I Do</p>
-        <h2 class="section-title reveal reveal-delay-1">Four pillars of reliable support.</h2>
-        <p class="section-lead reveal reveal-delay-1">End-to-end executive and operational support — tailored to keep leaders and teams running at their best.</p>
-        <div class="grid-4 stagger">
+        <h2 class="section-title reveal reveal-delay-1">How I Can Help.</h2>
+        <p class="section-lead reveal reveal-delay-1">Flexible support across admin, operations, CRM, and content — shaped around how your business actually works.</p>
+        <div class="grid-3 stagger">
           <div class="card featured reveal">
             <div class="pill-num">01</div>
             <h3>Executive Admin Support <span class="tag-hot">Core</span></h3>
@@ -488,14 +495,24 @@
             <div class="pill-num">02</div>
             <h3>Operations Assistance <span class="tag-hot">Core</span></h3>
             <ul>
-              <li>CRM updates & lead follow-up</li>
               <li>Trackers & pipelines</li>
               <li>Workflow coordination</li>
               <li>Light reporting & data entry</li>
+              <li>Cross-functional coordination</li>
             </ul>
           </div>
           <div class="card reveal">
             <div class="pill-num">03</div>
+            <h3>CRM & Automation Support</h3>
+            <ul>
+              <li>Go High Level &amp; Podio hygiene</li>
+              <li>Contact &amp; lead management</li>
+              <li>CRM organization</li>
+              <li>Follow-up tracking</li>
+            </ul>
+          </div>
+          <div class="card reveal">
+            <div class="pill-num">04</div>
             <h3>Administrative Excellence</h3>
             <ul>
               <li>Inbox & file organization</li>
@@ -505,12 +522,20 @@
             </ul>
           </div>
           <div class="card reveal">
-            <div class="pill-num">04</div>
-            <h3>Content & Outreach Support</h3>
+            <div class="pill-num">05</div>
+            <h3>Content & Social Media Support</h3>
             <ul>
               <li>Canva graphics & posts</li>
               <li>Content calendar upkeep</li>
+              <li>Social media scheduling & engagement</li>
+            </ul>
+          </div>
+          <div class="card reveal">
+            <div class="pill-num">06</div>
+            <h3>Marketing & Outreach Support</h3>
+            <ul>
               <li>Targeted outreach tracking</li>
+              <li>Lead follow-up & qualification</li>
               <li>Client & stakeholder follow-ups</li>
             </ul>
           </div>
@@ -789,17 +814,17 @@
         <p class="section-label reveal">More Than Just a VA</p>
         <h2 class="section-title reveal reveal-delay-1">I don't just wait for instructions.</h2>
         <p class="section-lead reveal reveal-delay-1">I look for ways to make your work easier.</p>
-        <div class="tools-row reveal reveal-delay-1">
-          <span class="tool-pill">✓ Organized and detail-oriented</span>
-          <span class="tool-pill">✓ Proactive and dependable</span>
-          <span class="tool-pill">✓ Fast learner</span>
-          <span class="tool-pill">✓ Strong communication</span>
-          <span class="tool-pill">✓ Comfortable with multiple tools</span>
-          <span class="tool-pill">✓ Creative and analytical</span>
-          <span class="tool-pill">✓ Adaptable to different industries</span>
-          <span class="tool-pill">✓ Client-focused</span>
-          <span class="tool-pill">✓ Comfortable working independently</span>
-          <span class="tool-pill">✓ Always willing to learn</span>
+        <div class="trait-grid reveal reveal-delay-1">
+          <div class="trait-item"><span class="trait-check">✓</span><span>Organized and detail-oriented</span></div>
+          <div class="trait-item"><span class="trait-check">✓</span><span>Proactive and dependable</span></div>
+          <div class="trait-item"><span class="trait-check">✓</span><span>Fast learner</span></div>
+          <div class="trait-item"><span class="trait-check">✓</span><span>Strong communication</span></div>
+          <div class="trait-item"><span class="trait-check">✓</span><span>Comfortable with multiple tools</span></div>
+          <div class="trait-item"><span class="trait-check">✓</span><span>Creative and analytical</span></div>
+          <div class="trait-item"><span class="trait-check">✓</span><span>Adaptable to different industries</span></div>
+          <div class="trait-item"><span class="trait-check">✓</span><span>Client-focused</span></div>
+          <div class="trait-item"><span class="trait-check">✓</span><span>Comfortable working independently</span></div>
+          <div class="trait-item"><span class="trait-check">✓</span><span>Always willing to learn</span></div>
         </div>
       </div>
     </section>
