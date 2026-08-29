@@ -118,6 +118,23 @@
     .stat-box { text-align: center; padding: 1.35rem 1rem; background: var(--card); border: 1px solid var(--border); border-radius: 12px; backdrop-filter: blur(12px); }
     .stat-num { font-family: 'Playfair Display', serif; font-size: 1.9rem; font-weight: 700; color: var(--accent); }
     .stat-label { font-size: 0.8rem; color: var(--text-muted); margin-top: 0.25rem; }
+    /* Work sample gallery */
+    .work-card { padding: 0; overflow: hidden; margin: 0; }
+    .work-card img { width: 100%; height: auto; display: block; border-bottom: 1px solid var(--border); cursor: zoom-in; transition: transform 0.4s ease; }
+    .work-card:hover img { transform: scale(1.03); }
+    .work-card figcaption { padding: 1rem 1.25rem; }
+    .work-card figcaption h3 { margin: 0 0 0.2rem; font-size: 1rem; }
+    .work-card figcaption p { margin: 0; font-size: 0.85rem; color: var(--text-muted); }
+    /* Skills grid */
+    .skill-item { background: var(--card, rgba(255,255,255,0.02)); border: 1px solid var(--border); border-left: 3px solid var(--accent); border-radius: 10px; padding: 0.85rem 1rem; font-size: 0.92rem; font-weight: 500; }
+    /* Tools grid image */
+    .tools-image { width: 100%; max-width: 900px; height: auto; display: block; margin: 0.5rem auto 1.75rem; border: 1px solid var(--border); border-radius: 14px; }
+    /* Lightbox */
+    .lightbox { position: fixed; inset: 0; background: rgba(0,0,0,0.9); display: none; align-items: center; justify-content: center; z-index: 1000; padding: 4vh 4vw; cursor: zoom-out; opacity: 0; transition: opacity 0.25s ease; }
+    .lightbox.open { display: flex; opacity: 1; }
+    .lightbox img { max-width: 100%; max-height: 92vh; border-radius: 10px; box-shadow: 0 20px 60px rgba(0,0,0,0.6); }
+    .lightbox-close { position: absolute; top: 18px; right: 26px; font-size: 2rem; line-height: 1; color: var(--ivory, #f8f5ef); background: none; border: none; cursor: pointer; opacity: 0.8; }
+    .lightbox-close:hover { opacity: 1; }
 
     /* Grids */
     .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem; }
@@ -468,7 +485,7 @@
         <div class="stats-row stagger">
           <div class="stat-box featured reveal"><div class="stat-num">8+</div><div class="stat-label">Years professional experience</div></div>
           <div class="stat-box featured reveal"><div class="stat-num">EA</div><div class="stat-label">Executive admin support</div></div>
-          <div class="stat-box reveal"><div class="stat-num">US+PH</div><div class="stat-label">Cross-timezone support</div></div>
+          <div class="stat-box reveal"><div class="stat-num">CA+US+PH</div><div class="stat-label">Cross-timezone support</div></div>
           <div class="stat-box reveal"><div class="stat-num">∞</div><div class="stat-label">Follow-throughs completed</div></div>
           <div class="stat-box reveal"><div class="stat-num">20-40</div><div class="stat-label">Hours reclaimed per week</div></div>
         </div>
@@ -480,64 +497,102 @@
       <div class="container">
         <p class="section-label reveal">What I Do</p>
         <h2 class="section-title reveal reveal-delay-1">How I Can Help.</h2>
-        <p class="section-lead reveal reveal-delay-1">Flexible support across admin, operations, CRM, and content — shaped around how your business actually works.</p>
-        <div class="grid-3 stagger">
+        <p class="section-lead reveal reveal-delay-1">Flexible support across admin, marketing, creative, and operations — shaped around how your business actually works.</p>
+        <div class="grid-4 stagger">
           <div class="card featured reveal">
             <div class="pill-num">01</div>
-            <h3>Executive Admin Support <span class="tag-hot">Core</span></h3>
+            <h3>Administrative Support <span class="tag-hot">Core</span></h3>
             <ul>
-              <li>Calendar & schedule ownership</li>
-              <li>Meeting & travel coordination</li>
-              <li>Inbox triage & prioritization</li>
-              <li>Confidential documentation</li>
+              <li>Data entry</li>
+              <li>Document organization</li>
+              <li>Email support</li>
+              <li>Calendar management</li>
+              <li>Scheduling</li>
+              <li>Research</li>
+              <li>File organization</li>
             </ul>
           </div>
           <div class="card featured reveal">
             <div class="pill-num">02</div>
-            <h3>Operations Assistance <span class="tag-hot">Core</span></h3>
+            <h3>Executive &amp; Operations Support <span class="tag-hot">Core</span></h3>
             <ul>
-              <li>Trackers & pipelines</li>
-              <li>Workflow coordination</li>
-              <li>Light reporting & data entry</li>
-              <li>Cross-functional coordination</li>
+              <li>Task coordination</li>
+              <li>Project support</li>
+              <li>Workflow organization</li>
+              <li>SOP documentation</li>
+              <li>Client communication</li>
+              <li>Operations assistance</li>
             </ul>
           </div>
           <div class="card reveal">
             <div class="pill-num">03</div>
-            <h3>CRM & Automation Support</h3>
+            <h3>Social Media Management</h3>
             <ul>
-              <li>Go High Level &amp; Podio hygiene</li>
-              <li>Contact &amp; lead management</li>
-              <li>CRM organization</li>
-              <li>Follow-up tracking</li>
+              <li>Content scheduling</li>
+              <li>Social media engagement</li>
+              <li>Content planning</li>
+              <li>Caption writing</li>
+              <li>Canva graphics</li>
+              <li>Social media research</li>
             </ul>
           </div>
           <div class="card reveal">
             <div class="pill-num">04</div>
-            <h3>Administrative Excellence</h3>
+            <h3>Marketing Support</h3>
             <ul>
-              <li>Inbox & file organization</li>
-              <li>Research & meeting prep</li>
-              <li>Invoicing & simple tracking</li>
-              <li>Reliable day-to-day execution</li>
+              <li>Lead generation</li>
+              <li>Online research</li>
+              <li>Email marketing support</li>
+              <li>Campaign support</li>
+              <li>Outreach</li>
+              <li>Marketing research</li>
             </ul>
           </div>
           <div class="card reveal">
             <div class="pill-num">05</div>
-            <h3>Content & Social Media Support</h3>
+            <h3>CRM &amp; Automation Support</h3>
             <ul>
-              <li>Canva graphics & posts</li>
-              <li>Content calendar upkeep</li>
-              <li>Social media scheduling & engagement</li>
+              <li>GoHighLevel</li>
+              <li>Podio</li>
+              <li>Contact management</li>
+              <li>Workflow support</li>
+              <li>Email workflows</li>
+              <li>CRM organization</li>
+              <li>Basic automation support</li>
             </ul>
           </div>
           <div class="card reveal">
             <div class="pill-num">06</div>
-            <h3>Marketing & Outreach Support</h3>
+            <h3>Creative Content</h3>
             <ul>
-              <li>Targeted outreach tracking</li>
-              <li>Lead follow-up & qualification</li>
-              <li>Client & stakeholder follow-ups</li>
+              <li>Canva designs</li>
+              <li>Flyers</li>
+              <li>Social media graphics</li>
+              <li>Newsletters</li>
+              <li>Presentations</li>
+              <li>Basic short-form video editing (CapCut)</li>
+            </ul>
+          </div>
+          <div class="card reveal">
+            <div class="pill-num">07</div>
+            <h3>Lead Generation</h3>
+            <ul>
+              <li>Prospect research</li>
+              <li>Online research</li>
+              <li>CRM data entry</li>
+              <li>Lead qualification</li>
+              <li>Outreach support</li>
+            </ul>
+          </div>
+          <div class="card reveal">
+            <div class="pill-num">08</div>
+            <h3>AI-Assisted Productivity</h3>
+            <ul>
+              <li>ChatGPT</li>
+              <li>AI research</li>
+              <li>Content assistance</li>
+              <li>Workflow ideas</li>
+              <li>Administrative automation support</li>
             </ul>
           </div>
         </div>
@@ -555,7 +610,7 @@
         <h3 class="reveal" style="font-family:'Playfair Display',serif;font-size:1.35rem;margin:2rem 0 1.25rem;color:var(--accent);">VA Journey</h3>
         <div class="timeline">
           <div class="timeline-item reveal">
-            <div class="timeline-role">Executive Administrative Assistant</div>
+            <div class="timeline-role">Executive Administrative Assistant | Repairs and Maintenance <span class="tag-hot">Primary</span></div>
             <div class="timeline-meta">Green Horizon Services · Atlanta, Georgia · 2026</div>
             <div class="timeline-desc">Execute daily operations, project tracking, and general administration by managing workflows, project documentation, and cross-functional communications. Streamline supply chain and HR operations by reconciling orders against bills of materials, coordinating vendor schedules, and supporting end-to-end candidate onboarding. Ensure organizational efficiency through proactive task prioritization, data entry, and comprehensive status reporting.</div>
             <div class="timeline-tags">
@@ -563,8 +618,8 @@
             </div>
           </div>
           <div class="timeline-item reveal">
-            <div class="timeline-role">Executive Administrative Assistant <span class="tag-hot">Primary</span></div>
-            <div class="timeline-meta">Classico Autocare · Barrie, Ontario · 2026 – Present</div>
+            <div class="timeline-role">Executive Administrative Assistant | Auto detailing Services <span class="tag-hot">Primary</span></div>
+            <div class="timeline-meta">Classico Autocare · Barrie, Ontario · 2026</div>
             <div class="timeline-desc">Managed the day-to-day operations of Classico Autocare, overseeing scheduling, billing, customer communication, and administrative functions to support business growth. Managed customer engagement and marketing workflows while coordinating invoicing, payroll, records, and outsourced services to ensure timely execution, consistent follow-through, and prompt lead response.</div>
             <div class="timeline-tags">
               <span>Scheduling</span><span>Billing</span><span>Customer Communication</span><span>Invoicing</span><span>Payroll</span><span>Lead Response</span><span>Urable</span><span>QuickBooks</span><span>Kit</span><span>Canva</span>
@@ -660,13 +715,10 @@
       <div class="container">
         <p class="section-label reveal">Signature Engagement</p>
         <h2 class="section-title reveal reveal-delay-1">Right hand to a growing operation.</h2>
-        <p class="section-lead reveal reveal-delay-1">Classico Autocare (Barrie, Ontario) — Executive Admin Assistant managing day-to-day operations, customer engagement, and administrative systems.</p>
+        <p class="section-lead reveal reveal-delay-1">Executive Admin Assistant managing day-to-day operations, customer engagement, and administrative systems for a growing operation.</p>
         <div class="case reveal">
-          <div class="timeline-tags" style="margin-bottom:1.25rem;">
-            <span>Operations</span><span>Scheduling</span><span>Billing</span><span>Customer Communication</span><span>Payroll</span><span>Lead Response</span>
-          </div>
           <div class="case-grid">
-            <div class="case-block"><h4>Situation</h4><p>A growing autocare business needed someone to own scheduling, billing, customer communication, and admin — so operations stayed consistent and leads didn’t slip.</p></div>
+            <div class="case-block"><h4>Situation</h4><p>A growing business needed someone to own scheduling, billing, customer communication, and admin — so operations stayed consistent and leads didn’t slip.</p></div>
             <div class="case-block"><h4>Task</h4><p>Manage day-to-day operations: scheduling, invoicing, payroll, records, outsourced services, customer engagement, and marketing workflows.</p></div>
             <div class="case-block"><h4>Action</h4><p>Coordinated scheduling and billing, handled customer communication, kept payroll and records accurate, managed outsourced services, and responded to leads promptly.</p></div>
             <div class="case-block"><h4>Result</h4><p>Operations run with timely execution and consistent follow-through — supporting business growth without constant firefighting.</p></div>
@@ -681,36 +733,58 @@
         <p class="section-label reveal">Selected Work</p>
         <h2 class="section-title reveal reveal-delay-1">Sample work &amp; systems.</h2>
         <p class="section-lead reveal reveal-delay-1">A snapshot of the kind of execution I bring — clean content, organized systems, and follow-through clients can see.</p>
-        <div class="grid-3 stagger">
-          <div class="card reveal" style="padding:0;overflow:hidden;">
-            <div style="aspect-ratio:16/10;background:linear-gradient(135deg,rgba(201,178,124,0.18),rgba(248,245,239,0.08));display:flex;align-items:center;justify-content:center;border-bottom:1px solid var(--border);">
-              <span style="font-size:2.5rem;opacity:0.5;">🎨</span>
-            </div>
-            <div style="padding:1.25rem 1.4rem;">
-              <h3>Canva content &amp; marketing assets</h3>
-              <p>Social posts, ads, and brand visuals for client channels — clean, on-brand, and ready to publish.</p>
-            </div>
-          </div>
-          <div class="card reveal" style="padding:0;overflow:hidden;">
-            <div style="aspect-ratio:16/10;background:linear-gradient(135deg,rgba(248,245,239,0.12),rgba(201,178,124,0.1));display:flex;align-items:center;justify-content:center;border-bottom:1px solid var(--border);">
-              <span style="font-size:2.5rem;opacity:0.5;">📋</span>
-            </div>
-            <div style="padding:1.25rem 1.4rem;">
-              <h3>CRM &amp; tracker systems</h3>
-              <p>Go High Level / Podio hygiene, lead pipelines, and trackers that keep follow-ups visible and on time.</p>
-            </div>
-          </div>
-          <div class="card reveal" style="padding:0;overflow:hidden;">
-            <div style="aspect-ratio:16/10;background:linear-gradient(135deg,rgba(110,106,100,0.18),rgba(201,178,124,0.08));display:flex;align-items:center;justify-content:center;border-bottom:1px solid var(--border);">
-              <span style="font-size:2.5rem;opacity:0.5;">📅</span>
-            </div>
-            <div style="padding:1.25rem 1.4rem;">
-              <h3>Ops &amp; admin workflows</h3>
-              <p>Scheduling, billing, invoicing, and day-to-day operations structured so the business runs without constant firefighting.</p>
-            </div>
-          </div>
+        <p class="section-label reveal" style="margin-top:1.75rem;">Systems &amp; Spreadsheets</p>
+        <div class="grid-3 stagger work-gallery">
+          <figure class="card work-card reveal" data-full="assets/work-lead-prospecting.png">
+            <img src="assets/work-lead-prospecting.png" loading="lazy" alt="Lead prospecting and travel management spreadsheets" />
+            <figcaption><h3>Lead prospecting &amp; travel management</h3><p>Structured prospecting sheets with contact status tracking, plus a flight-options travel planner.</p></figcaption>
+          </figure>
+          <figure class="card work-card reveal" data-full="assets/work-outreach-tracker.png">
+            <img src="assets/work-outreach-tracker.png" loading="lazy" alt="Outreach tracker and job application tracker with KPIs" />
+            <figcaption><h3>Outreach &amp; application trackers</h3><p>KPI dashboards for outreach response rates and a full application pipeline with status stages.</p></figcaption>
+          </figure>
+          <figure class="card work-card reveal" data-full="assets/work-content-calendar.png">
+            <img src="assets/work-content-calendar.png" loading="lazy" alt="Content calendar tracker and data entry sheet" />
+            <figcaption><h3>Content calendar &amp; data entry</h3><p>A content tracker across platforms and a clean data-entry sheet with a live status breakdown.</p></figcaption>
+          </figure>
+          <figure class="card work-card reveal" data-full="assets/work-forms-crm.png">
+            <img src="assets/work-forms-crm.png" loading="lazy" alt="Google Form with responses and Go High Level inbox" />
+            <figcaption><h3>Forms &amp; CRM inbox</h3><p>Google Forms with response analysis, and Go High Level conversation and contact management.</p></figcaption>
+          </figure>
+          <figure class="card work-card reveal" data-full="assets/work-urable-quickbooks.png">
+            <img src="assets/work-urable-quickbooks.png" loading="lazy" alt="Urable booking calendar and QuickBooks dashboard" />
+            <figcaption><h3>Booking &amp; bookkeeping</h3><p>Urable scheduling calendar and a QuickBooks dashboard for invoicing, expenses, and cash flow.</p></figcaption>
+          </figure>
         </div>
-        <p class="reveal" style="margin-top:1.25rem;font-size:0.88rem;color:var(--text-muted);text-align:center;">More samples available on request — happy to walk through real examples on a call.</p>
+
+        <p class="section-label reveal" style="margin-top:2.25rem;">Graphic &amp; Content Design</p>
+        <div class="grid-3 stagger work-gallery">
+          <figure class="card work-card reveal" data-full="assets/work-classico-ceramic.png">
+            <img src="assets/work-classico-ceramic.png" loading="lazy" alt="Classico Autocare ceramic coating flyer" />
+            <figcaption><h3>Ceramic coating flyer</h3><p>Premium service flyer for Classico Autocare — protect, enhance, preserve.</p></figcaption>
+          </figure>
+          <figure class="card work-card reveal" data-full="assets/work-ppf-handbook.png">
+            <img src="assets/work-ppf-handbook.png" loading="lazy" alt="Paint Protection Film handbook cover" />
+            <figcaption><h3>Paint Protection Film handbook</h3><p>Cover design for a client PPF handbook — bold, on-brand, and detail-driven.</p></figcaption>
+          </figure>
+          <figure class="card work-card reveal" data-full="assets/work-classico-police.png">
+            <img src="assets/work-classico-police.png" loading="lazy" alt="Classico Autocare police appreciation offer flyer" />
+            <figcaption><h3>Appreciation offer flyer</h3><p>Community appreciation campaign for local first responders.</p></figcaption>
+          </figure>
+          <figure class="card work-card reveal" data-full="assets/work-classico-reviews.png">
+            <img src="assets/work-classico-reviews.png" loading="lazy" alt="Classico Autocare review campaign graphics" />
+            <figcaption><h3>Review campaign graphics</h3><p>Google-review and email teaser set to drive engagement.</p></figcaption>
+          </figure>
+          <figure class="card work-card reveal" data-full="assets/work-detailing-photography.png">
+            <img src="assets/work-detailing-photography.png" loading="lazy" alt="Auto detailing photography set" />
+            <figcaption><h3>Detailing photo set</h3><p>Branded photography grid for detailing and PPF service promotion.</p></figcaption>
+          </figure>
+          <figure class="card work-card reveal" data-full="assets/work-green-horizon.png">
+            <img src="assets/work-green-horizon.png" loading="lazy" alt="Green Horizon Services brand signage" />
+            <figcaption><h3>Green Horizon Services signage</h3><p>Brand sign layout — services, contact, and call-to-action in one clean panel.</p></figcaption>
+          </figure>
+        </div>
+        <p class="reveal" style="margin-top:1.5rem;font-size:0.88rem;color:var(--text-muted);text-align:center;">More samples available on request — happy to walk through real examples on a call.</p>
       </div>
     </section>
 
@@ -732,38 +806,28 @@
     <!-- SKILLS & TOOLS -->
     <section id="skills">
       <div class="container">
-        <p class="section-label reveal">Skills & Tools</p>
-        <h2 class="section-title reveal reveal-delay-1">The expertise behind the support.</h2>
-        <div class="grid-3 stagger" style="margin-bottom:2rem;">
-          <div class="card skill-cat reveal">
-            <h3>Executive & Administrative</h3>
-            <ul>
-              <li>Calendar & inbox management</li>
-              <li>Meeting & travel coordination</li>
-              <li>Document & records management</li>
-              <li>Confidential support</li>
-            </ul>
-          </div>
-          <div class="card skill-cat reveal">
-            <h3>Operations & Systems</h3>
-            <ul>
-              <li>CRM hygiene & follow-ups</li>
-              <li>Trackers & pipelines</li>
-              <li>Data entry & light reporting</li>
-              <li>Cross-functional coordination</li>
-            </ul>
-          </div>
-          <div class="card skill-cat reveal">
-            <h3>Communication & Content</h3>
-            <ul>
-              <li>Client & stakeholder messaging</li>
-              <li>Outreach & lead follow-up</li>
-              <li>Canva content creation</li>
-              <li>Clear written communication</li>
-            </ul>
-          </div>
+        <p class="section-label reveal">Skills</p>
+        <h2 class="section-title reveal reveal-delay-1">What I Bring to the Table.</h2>
+        <div class="grid-4 stagger skill-grid" style="margin-bottom:2.5rem;">
+          <div class="skill-item reveal">Administrative Support</div>
+          <div class="skill-item reveal">Executive Assistance</div>
+          <div class="skill-item reveal">Lead Generation</div>
+          <div class="skill-item reveal">CRM Management</div>
+          <div class="skill-item reveal">Social Media Management</div>
+          <div class="skill-item reveal">Marketing Support</div>
+          <div class="skill-item reveal">Content Creation</div>
+          <div class="skill-item reveal">Canva Design</div>
+          <div class="skill-item reveal">Email Support</div>
+          <div class="skill-item reveal">Online Research</div>
+          <div class="skill-item reveal">Data Entry</div>
+          <div class="skill-item reveal">Customer Support</div>
+          <div class="skill-item reveal">Project Coordination</div>
+          <div class="skill-item reveal">SOP Creation</div>
+          <div class="skill-item reveal">Workflow Support</div>
+          <div class="skill-item reveal">AI-Assisted Productivity</div>
         </div>
         <p class="section-label reveal">Tools I use</p>
+        <img class="tools-image reveal reveal-delay-1" src="assets/tools-i-use.png" loading="lazy" alt="Tools Nica uses — Microsoft Office, Google Workspace, Go High Level, Podio, Canva, QuickBooks, Docusign, Urable and more" />
         <div class="tools-row reveal reveal-delay-1">
           <span class="tool-pill" style="border-color:rgba(201,178,124,0.45);color:var(--accent);">Go High Level</span>
           <span class="tool-pill" style="border-color:rgba(201,178,124,0.45);color:var(--accent);">Podio</span>
@@ -830,20 +894,6 @@
       </div>
     </section>
 
-    <!-- FAQ -->
-    <section id="faq">
-      <div class="container">
-        <p class="section-label reveal">FAQ</p>
-        <h2 class="section-title reveal reveal-delay-1">Good questions.</h2>
-        <div class="grid-2 stagger">
-          <div class="card reveal"><h3>What timezone do you work in?</h3><p>Based in Taguig City, Metro Manila (PHT). I regularly support US clients and align coverage to what you need.</p></div>
-          <div class="card reveal"><h3>Who is a good fit?</h3><p>Founders, operators, and small teams who want reliable executive and operations support — not someone who needs constant direction.</p></div>
-          <div class="card reveal"><h3>How do we start?</h3><p>A short conversation, a clear scope for the first 30 days, then I get to work.</p></div>
-          <div class="card reveal"><h3>Is this only admin work?</h3><p>Admin and operations are the core. I also support CRM, light content, outreach tracking, and the systems that keep those moving.</p></div>
-        </div>
-      </div>
-    </section>
-
     <!-- EDUCATION -->
     <section id="education">
       <div class="container">
@@ -874,6 +924,20 @@
       </div>
     </section>
 
+    <!-- FAQ -->
+    <section id="faq">
+      <div class="container">
+        <p class="section-label reveal">FAQ</p>
+        <h2 class="section-title reveal reveal-delay-1">Good questions.</h2>
+        <div class="grid-2 stagger">
+          <div class="card reveal"><h3>What timezone do you work in?</h3><p>Based in Taguig City, Metro Manila (PHT). I regularly support CA and US clients and align coverage to what you need.</p></div>
+          <div class="card reveal"><h3>Who is a good fit?</h3><p>Founders, operators, and small teams who want reliable executive and operations support — not someone who needs constant direction.</p></div>
+          <div class="card reveal"><h3>How do we start?</h3><p>Let's discuss your vision in a 30-minute discovery call. I'll then send a proposal with a 30-day roadmap, KPIs, and a clear solution.</p></div>
+          <div class="card reveal"><h3>Is this only admin work?</h3><p>Admin and operations are the core. I also support CRM, light content, outreach tracking, and the systems that keep those moving.</p></div>
+        </div>
+      </div>
+    </section>
+
     <!-- CONTACT -->
 
     <section class="contact" id="contact">
@@ -895,7 +959,7 @@
                 </div>
               </div>
               <div class="form-field">
-                <textarea name="message" placeholder="Tell me about your project or business needs..." required></textarea>
+                <textarea name="message" placeholder="Tell me about your project or business needs" required></textarea>
               </div>
               <button type="submit" class="btn-send">Send Message →</button>
             </form>
@@ -909,6 +973,7 @@
             <div class="detail-item">
               <div class="detail-label">Phone</div>
               <a href="tel:+639305707834">+63 930 570 7834</a>
+              <span style="display:block;font-size:0.8rem;color:var(--text-muted);margin-top:0.25rem;">(WhatsApp and Viber ready)</span>
             </div>
             <div class="detail-item">
               <div class="detail-label">Location</div>
@@ -1418,6 +1483,30 @@
     const navLinks = document.getElementById('navLinks');
     menuBtn.addEventListener('click', () => navLinks.classList.toggle('open'));
     navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', () => navLinks.classList.remove('open')));
+  </script>
+  <div class="lightbox" id="lightbox" aria-hidden="true">
+    <button class="lightbox-close" id="lightboxClose" aria-label="Close">&times;</button>
+    <img id="lightboxImg" src="" alt="" />
+  </div>
+  <script>
+    (function () {
+      const lb = document.getElementById('lightbox');
+      const lbImg = document.getElementById('lightboxImg');
+      const close = () => { lb.classList.remove('open'); lb.setAttribute('aria-hidden', 'true'); lbImg.src = ''; };
+      document.querySelectorAll('.work-card[data-full]').forEach(card => {
+        card.addEventListener('click', () => {
+          const src = card.getAttribute('data-full');
+          const img = card.querySelector('img');
+          lbImg.src = src;
+          lbImg.alt = img ? img.alt : '';
+          lb.classList.add('open');
+          lb.setAttribute('aria-hidden', 'false');
+        });
+      });
+      lb.addEventListener('click', close);
+      document.getElementById('lightboxClose').addEventListener('click', close);
+      document.addEventListener('keydown', e => { if (e.key === 'Escape') close(); });
+    })();
   </script>
 </body>
 </html>
