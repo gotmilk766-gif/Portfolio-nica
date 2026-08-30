@@ -55,6 +55,20 @@
     @media (max-width: 800px) {
       .custom-cursor { display: none; }
     }
+    .bg-image {
+      position: fixed;
+      inset: 0;
+      z-index: -1;
+      background-image: url('assets/background_removed.png');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      opacity: 0.35;
+      pointer-events: none;
+    }
+    @media (max-width: 800px) {
+      .bg-image { opacity: 0.2; }
+    }
     * { margin: 0; padding: 0; box-sizing: border-box; }
     html { scroll-behavior: smooth; }
     html, body { margin: 0; padding: 0; background: #111111; overflow-x: hidden; }
@@ -430,6 +444,7 @@
 </head>
 <body>
   <div class="custom-cursor" id="customCursor"></div>
+  <div class="bg-image" id="bgImage"></div>
   <canvas id="scene"></canvas>
   <div class="scroll-progress" id="scrollProgress"></div>
 
