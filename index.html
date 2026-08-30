@@ -32,6 +32,27 @@
       --glow: 0 0 40px rgba(201, 178, 124, 0.25);
       --on-accent: #111111;
     }
+    /* Custom cursor */
+    .custom-cursor {
+      position: fixed;
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      background: radial-gradient(circle at 30% 30%, var(--accent), transparent 70%);
+      pointer-events: none;
+      z-index: 9999;
+      mix-blend-mode: screen;
+      transform: translate(-50%, -50%);
+      transition: width 0.15s, height 0.15s, opacity 0.2s;
+    }
+    .custom-cursor.hover {
+      width: 48px;
+      height: 48px;
+      opacity: 0.8;
+    }
+    @media (max-width: 800px) {
+      .custom-cursor { display: none; }
+    }
     * { margin: 0; padding: 0; box-sizing: border-box; }
     html { scroll-behavior: smooth; }
     html, body { margin: 0; padding: 0; background: #111111; overflow-x: hidden; }
@@ -406,6 +427,7 @@
   </style>
 </head>
 <body>
+  <div class="custom-cursor" id="customCursor"></div>
   <canvas id="scene"></canvas>
   <div class="scroll-progress" id="scrollProgress"></div>
 
@@ -449,10 +471,10 @@
       <div class="container">
         <p class="section-label reveal">About Nica Abelido</p>
         <h2 class="section-title reveal reveal-delay-1">A trusted right hand for busy leaders.</h2>
-        <p class="section-lead reveal reveal-delay-1">A results-driven Executive Admin Assistant and Operations Secretary professional with 8+ years across BPO, banking, customer service, executive assistance, and project coordination.</p>
+        <p class="section-lead reveal reveal-delay-1">A results-driven Executive Admin Assistant and Operations Secretary professional with 8+ years across BPO, banking, customer service, executive assistance, project coordination, finance, education, insurance, operations management, and information technology.</p>
         <div class="grid-2">
           <div class="reveal reveal-delay-2">
-            <p style="color:var(--text-muted);margin-bottom:1rem;">Most recently I supported a specialized car rental company in Columbus, Ohio — owning CRM, logistics, bookings, and digital content so the team could focus on growth. Before that I sharpened communication and outreach skills as a Twitter Content Strategist and Targeted Twitter and Instagram Outreach Specialist.</p>
+            <p style="color:var(--text-muted);margin-bottom:1rem;">Most recently, I supported businesses across a range of industries, including specialized car rental, residential and commercial maintenance and repair, and professional auto detailing services — owning CRM, logistics, bookings, and digital content so the team could focus on growth. Before that I sharpened communication and outreach skills as a Twitter Content Strategist and Targeted Twitter and Instagram Outreach Specialist.</p>
             <p style="color:var(--text-muted);">Organized, proactive, and warm — I turn day-to-day chaos into clear, dependable systems so the people I support can focus on the decisions that matter.</p>
             <p class="quote-line">"Great support is invisible. When operations run smoothly, leaders are free to lead."</p>
             <div class="highlight-band">
@@ -599,7 +621,7 @@
         <p class="section-lead reveal reveal-delay-1">Full-time professional roles and hands-on VA / executive admin support — both built on follow-through, systems, and clear communication.</p>
 
         <!-- VA / Executive Admin Journey -->
-        <h3 class="reveal" style="font-family:'Playfair Display',serif;font-size:1.35rem;margin:2rem 0 1.25rem;color:var(--accent);">VA Journey</h3>
+        <h3 class="reveal" style="font-family:'Playfair Display',serif;font-size:1.35rem;margin:2rem 0 1.25rem;color:var(--accent);">Virtual Assistant Experience</h3>
         <div class="timeline">
           <div class="timeline-item reveal">
             <div class="timeline-role">Executive Administrative Assistant | Repairs and Maintenance <span class="tag-hot">Primary</span></div>
@@ -634,13 +656,13 @@
           <div class="timeline-item reveal">
             <div class="timeline-role">Targeted Twitter and Instagram Outreach Specialist</div>
             <div class="timeline-meta">Nov 2024 – Dec 2024</div>
-            <div class="timeline-desc">Developed and implemented Twitter strategies through audience research, content creation, account management, performance analysis, and cross-functional collaboration to strengthen engagement and online presence.</div>
+            <div class="timeline-desc">Managed targeted Twitter and Instagram outreach campaigns to generate qualified leads, engage prospects, and increase audience reach through strategic targeting and personalized communication.</div>
             <div class="timeline-tags"><span>Outreach</span><span>Lead Gen</span><span>Relationship Building</span><span>Twitter</span><span>Instagram</span></div>
           </div>
         </div>
 
         <!-- Professional Journey -->
-        <h3 class="reveal" style="font-family:'Playfair Display',serif;font-size:1.35rem;margin:3rem 0 1.25rem;color:var(--accent);">Professional Journey</h3>
+        <h3 class="reveal" style="font-family:'Playfair Display',serif;font-size:1.35rem;margin:3rem 0 1.25rem;color:var(--accent);">Professional Experience</h3>
         <div class="timeline">
           <div class="timeline-item reveal">
             <div class="timeline-role">Global Project Maintenance Analyst</div>
@@ -727,6 +749,10 @@
         <p class="section-lead reveal reveal-delay-1">A snapshot of the kind of execution I bring — clean content, organized systems, and follow-through clients can see.</p>
         <p class="section-label reveal" style="margin-top:1.75rem;">Systems &amp; Spreadsheets</p>
         <div class="grid-3 stagger work-gallery">
+          <figure class="card work-card reveal" data-full="assets/work-collaboration-invoice.png">
+            <img src="assets/work-collaboration-invoice.png" loading="lazy" alt="Collaboration Letter and Invoice Template" />
+            <figcaption><h3>Collaboration & Invoice System</h3><p>Professional collaboration outreach letter and standardized invoice template for seamless billing.</p></figcaption>
+          </figure>
           <figure class="card work-card reveal" data-full="assets/work-lead-prospecting.png">
             <img src="assets/work-lead-prospecting.png" loading="lazy" alt="Lead prospecting and travel management spreadsheets" />
             <figcaption><h3>Lead prospecting &amp; travel management</h3><p>Structured prospecting sheets with contact status tracking, plus a flight-options travel planner.</p></figcaption>
@@ -915,6 +941,13 @@
         </div>
         <div class="contact-wrap reveal">
           <div class="contact-form-panel">
+            <div class="resume-download" style="margin-bottom:1.5rem;text-align:center;">
+              <a href="assets/Nica_Abelido_Resume.docx" class="btn" download style="display:inline-flex;align-items:center;gap:0.5rem;">
+                <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg>
+                Download ATS Resume
+              </a>
+              <p style="font-size:0.75rem;color:var(--text-muted);margin-top:0.5rem;">Professional ATS-optimized resume (2 pages)</p>
+            </div>
             <form id="contactForm" action="mailto:veronica.abelido0819@gmail.com" method="POST" enctype="text/plain">
               <div class="form-row">
                 <div class="form-field">
@@ -1449,6 +1482,42 @@
     const navLinks = document.getElementById('navLinks');
     menuBtn.addEventListener('click', () => navLinks.classList.toggle('open'));
     navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', () => navLinks.classList.remove('open')));
+
+    // Custom cursor
+    const cursor = document.getElementById('customCursor');
+    let cursorX = 0, cursorY = 0;
+    let mouseX = 0, mouseY = 0;
+    let cursorVisible = false;
+
+    document.addEventListener('mousemove', (e) => {
+      mouseX = e.clientX;
+      mouseY = e.clientY;
+      if (!cursorVisible) {
+        cursorVisible = true;
+        cursor.style.opacity = '1';
+      }
+    });
+
+    document.addEventListener('mouseout', () => {
+      cursorVisible = false;
+      cursor.style.opacity = '0';
+    });
+
+    // Hover targets for cursor expansion
+    const hoverTargets = 'a, button, .card, .work-card, .btn, .nav-links a, .contact-link, .trait-item, .stat-box, .skill-item';
+    document.querySelectorAll(hoverTargets).forEach(el => {
+      el.addEventListener('mouseenter', () => cursor.classList.add('hover'));
+      el.addEventListener('mouseleave', () => cursor.classList.remove('hover'));
+    });
+
+    function animateCursor() {
+      cursorX += (mouseX - cursorX) * 0.15;
+      cursorY += (mouseY - cursorY) * 0.15;
+      cursor.style.left = cursorX + 'px';
+      cursor.style.top = cursorY + 'px';
+      requestAnimationFrame(animateCursor);
+    }
+    animateCursor();
   </script>
   <div class="lightbox" id="lightbox" aria-hidden="true">
     <button class="lightbox-close" id="lightboxClose" aria-label="Close">&times;</button>
