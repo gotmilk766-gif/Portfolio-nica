@@ -35,20 +35,22 @@
     /* Custom cursor */
     .custom-cursor {
       position: fixed;
-      width: 24px;
-      height: 24px;
-      border-radius: 50%;
-      background: radial-gradient(circle at 30% 30%, var(--accent), transparent 70%);
+      width: 32px;
+      height: 32px;
       pointer-events: none;
       z-index: 9999;
-      mix-blend-mode: screen;
       transform: translate(-50%, -50%);
       transition: width 0.15s, height 0.15s, opacity 0.2s;
+      background-image: url('assets/cursor_64.png');
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+      mix-blend-mode: normal;
     }
     .custom-cursor.hover {
       width: 48px;
       height: 48px;
-      opacity: 0.8;
+      opacity: 0.9;
     }
     @media (max-width: 800px) {
       .custom-cursor { display: none; }
